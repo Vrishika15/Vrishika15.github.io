@@ -5,11 +5,68 @@ body {
   color: #e2e8f0;
 }
 
+
+/* Navigation */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid #1e293b;
+
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+}
+
+.nav-logo {
+  color: #f8fafc;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+
+/* Hero Section */
+
 .hero {
   min-height: 100vh;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 60px 40px;
+
+  padding: 120px 40px 60px;
 
   display: flex;
   align-items: center;
@@ -26,27 +83,37 @@ body {
 h1 {
   font-size: 56px;
   margin: 0 0 12px 0;
+
   color: #f8fafc;
 }
 
 h2 {
   font-size: 26px;
   font-weight: 500;
+
   color: #94a3b8;
+
   margin: 0 0 28px 0;
 }
 
 p {
   font-size: 17px;
   line-height: 1.7;
+
   max-width: 700px;
+
   margin: 0;
+
   color: #e2e8f0;
 }
+
+
+/* Profile Photo */
 
 .hero-photo {
   width: 300px;
   height: 300px;
+
   flex-shrink: 0;
 
   border-radius: 50%;
@@ -67,8 +134,12 @@ p {
   transform: scale(1.45);
 }
 
+
+/* Hero Buttons */
+
 .hero-buttons {
   margin-top: 28px;
+
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
@@ -76,6 +147,7 @@ p {
 
 .btn {
   display: inline-block;
+
   padding: 12px 20px;
 
   border: 1px solid #475569;
@@ -93,12 +165,14 @@ p {
 .btn:hover {
   background-color: #1e293b;
   border-color: #64748b;
+
   transform: translateY(-2px);
 }
 
 .btn.primary {
   background-color: #2563eb;
   border-color: #2563eb;
+
   color: white;
 }
 
@@ -106,14 +180,31 @@ p {
   background-color: #1d4ed8;
 }
 
+
+/* Mobile / Tablet */
+
 @media (max-width: 850px) {
+
+  .nav-container {
+    padding: 16px 25px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
 
   .hero {
     flex-direction: column-reverse;
+
     justify-content: center;
     text-align: center;
 
-    padding: 50px 25px;
+    padding: 120px 25px 50px;
+
     gap: 35px;
   }
 
@@ -132,5 +223,9 @@ p {
 
   p {
     margin: 0 auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
   }
 }
